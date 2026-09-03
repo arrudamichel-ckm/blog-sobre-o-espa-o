@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronteira Estelar | Blog Espacial</title>
+    <style>
+        /* Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0d17;
+            color: #c4c7ce;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(180deg, #05070f 0%, #0b0d17 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #1e2235;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header h1 span {
+            color: #4f46e5;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #8a8f98;
+        }
+
+        /* Layout Principal */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Lista de Postagens */
+        .feed {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .post {
+            background-color: #121626;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #1e2235;
+            transition: transform 0.2s;
+        }
+
+        .post:hover {
+            transform: translateY(-4px);
+            border-color: #4f46e5;
+        }
+
+        .post-banner {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Imagens simuladas via Unsplash */
+        .img-buraco-negro { background-image: url('https://unsplash.com'); }
+        .img-james-webb { background-image: url('https://unsplash.com'); }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #4f46e5;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .post-excerpt {
+            color: #a0a5b5;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: #ffffff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .read-more:hover {
+            background-color: #3730a3;
+        }
+
+        /* Barra Lateral */
+        sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background-color: #121626;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #1e2235;
+        }
+
+        .widget h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #4f46e5;
+            padding-left: 0.5rem;
+        }
+
+        .widget p {
+            font-size: 0.95rem;
+            color: #a0a5b5;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid #1e2235;
+            color: #626773;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho do Blog -->
+    <header>
+        <h1>Fronteira <span>Estelar</span></h1>
+        <p>Explorando os mistérios e as maravilhas do universo.</p>
+    </header>
+
+    <!-- Área de Conteúdo -->
+    <div class="container">
+        
+        <!-- Feed de Notícias/Postagens -->
+        <main class="feed">
+            
+            <!-- Post 1 -->
+            <article class="post">
+                <div class="post-banner img-buraco-negro"></div>
+                <div class="post-content">
+                    <div class="post-meta">Mistérios do Cosmos • 03 Set 2026</div>
+                    <h2 class="post-title">O que acontece dentro de um Buraco Negro?</h2>
+                    <p class="post-excerpt">A espaguetificação e a distorção do tempo-espaço. Entenda de forma simples as teorias físicas mais fascinantes que tentam explicar o que existe além do horizonte de eventos.</p>
+                    <a href="#" class="read-more">Ler Artigo Completo</a>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="post">
+                <div class="post-banner img-james-webb"></div>
+                <div class="post-content">
+                    <div class="post-meta">Exploração Espacial • 28 Ago 2026</div>
+                    <h2 class="post-title">James Webb revela segredos de galáxias primitivas</h2>
+                    <p class="post-excerpt">Novas imagens infravermelhas capturadas pelo supertelescópio espacial mostram berçários de estrelas formados há mais de 13 bilhões de anos, desafiando astrônomos.</p>
+                    <a href="#" class="read-more">Ler Artigo Completo</a>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Sobre o Blog</h3>
+                <p>Bem-vindo ao Fronteira Estelar! Este espaço é dedicado a astrônomos amadores, entusiastas da ciência e qualquer pessoa curiosa sobre a imensidão do universo.</p>
+            </div>
+            
+            <div class="widget">
+                <h3>Fato Rápido</h3>
+                <p>Você sabia? Um dia em Vênus é mais longo do que um ano inteiro no planeta. Ele leva mais tempo para girar sobre seu próprio eixo do que para completar uma órbita ao redor do Sol.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Fronteira Estelar. Feito para os amantes do espaço.</p>
+    </footer>
+
+</body>
+</html>
